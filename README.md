@@ -41,6 +41,8 @@ cd blog-app
 npm install
 3. Run the App
 node app.js
+
+
 Then open your browser and go to:
 
 http://localhost:3000
