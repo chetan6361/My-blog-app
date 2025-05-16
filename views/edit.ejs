@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="container" style="margin-top: 100px;">
+    <form action="/edit/<%= post.id %>" method="POST">
+      <div class="mb-3">
+        <label for="Title" class="form-label">Enter Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          value="<%= post.title %>"
+          maxlength="70"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="NewPostContent" class="form-label">Enter The Content</label>
+        <textarea class="form-control" id="content" name="content" rows="3" required maxlength="500"><%= post.content %></textarea>
+      </div>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> 
+        <button type="submit" class="btn btn-primary btn-lg px-4 gap-3" >Update</button> 
+        <a href="/" type="button" class="btn btn-outline-secondary btn-lg px-4">Back</a> 
+      </div>
+    </form>
+  </div>
+
+
+<%- include("partials/footer.ejs") %>
+
